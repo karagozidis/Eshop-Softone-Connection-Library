@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{47983302-128C-420F-81B6-1CC793B21549}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ClassLibrary4</RootNamespace>
+    <AssemblyName>ClassLibrary4</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\..\..\..\..\s1.demo.server\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\..\Desktop\mxb2b\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'd|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\d\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CTools, Version=1.38.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\s1.demo.server\CTools.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\..\..\..\Desktop\Αρχείο\05-11-16\Net20\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Softone.Lib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=307c481590b30bd3, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\S1\Softone.Lib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CONTROL\CCCCustomerRMenu.cs" />
+    <Compile Include="CONTROL\Btbpprms.cs" />
+    <Compile Include="CONTROL\CCCCONNECTIONBRICKobj.cs" />
+    <Compile Include="CONTROL\CCCItemRMenu.cs" />
+    <Compile Include="CONTROL\PURDOC.cs" />
+    <Compile Include="CONTROL\SALDOC.cs" />
+    <Compile Include="CONTROL\SyncExecuter.cs" />
+    <Compile Include="INOUT\HTTP\CDIMHttp.cs" />
+    <Compile Include="INOUT\WEBCALL.cs" />
+    <Compile Include="MDL\CDIM.cs" />
+    <Compile Include="MDL\CDIMLINE.cs" />
+    <Compile Include="MDL\CDIMS.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\SettingsPerUsr.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>SettingsPerUsr.settings</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\ClassLibrary4ParamForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\ClassLibrary4ParamForm.Designer.cs">
+      <DependentUpon>ClassLibrary4ParamForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CONTROL\Customer.cs" />
+    <Compile Include="VIEW\CustomerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\CustomerForm.Designer.cs">
+      <DependentUpon>CustomerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="INOUT\HTTP\CustomerHttp.cs" />
+    <Compile Include="VIEW\CustomerRMenuFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\CustomerRMenuFrm.Designer.cs">
+      <DependentUpon>CustomerRMenuFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\DLLForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\DLLForm.Designer.cs">
+      <DependentUpon>DLLForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="INOUT\ExternalBrowser.cs" />
+    <Compile Include="VIEW\Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalFunctions.cs" />
+    <Compile Include="ImageUploader.cs" />
+    <Compile Include="CONTROL\Item.cs" />
+    <Compile Include="VIEW\GeneralSyncForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\GeneralSyncForm.Designer.cs">
+      <DependentUpon>GeneralSyncForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\ItemForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\ItemForm.Designer.cs">
+      <DependentUpon>ItemForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="INOUT\HTTP\ItemHttp.cs" />
+    <Compile Include="INOUT\HTTP\OptionHttp.cs" />
+    <Compile Include="CONTROL\Order.cs" />
+    <Compile Include="INOUT\HTTP\OrderHttp.cs" />
+    <Compile Include="CONTROL\PRCCategory.cs" />
+    <Compile Include="VIEW\ItemRMenuFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\ItemRMenuFrm.Designer.cs">
+      <DependentUpon>ItemRMenuFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\PRCCategoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\PRCCategoryForm.Designer.cs">
+      <DependentUpon>PRCCategoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="INOUT\HTTP\PRCCategoryHttp.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VIEW\PurdocRMenuFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\PurdocRMenuFrm.Designer.cs">
+      <DependentUpon>PurdocRMenuFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\S1CustomOrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\S1CustomOrderForm.Designer.cs">
+      <DependentUpon>S1CustomOrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CONTROL\S1Init.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="VIEW\SaldocRMenuFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\SaldocRMenuFrm.Designer.cs">
+      <DependentUpon>SaldocRMenuFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\SyncColorsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\SyncColorsForm.Designer.cs">
+      <DependentUpon>SyncColorsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\SyncSizesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\SyncSizesForm.Designer.cs">
+      <DependentUpon>SyncSizesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VWEBEXCEPTION.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\ClassLibrary4ParamForm.resx">
+      <DependentUpon>ClassLibrary4ParamForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\CustomerForm.resx">
+      <DependentUpon>CustomerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\CustomerRMenuFrm.resx">
+      <DependentUpon>CustomerRMenuFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\GeneralSyncForm.resx">
+      <DependentUpon>GeneralSyncForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\ItemForm.resx">
+      <DependentUpon>ItemForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\ItemRMenuFrm.resx">
+      <DependentUpon>ItemRMenuFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\PRCCategoryForm.resx">
+      <DependentUpon>PRCCategoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\PurdocRMenuFrm.resx">
+      <DependentUpon>PurdocRMenuFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\S1CustomOrderForm.resx">
+      <DependentUpon>S1CustomOrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\SaldocRMenuFrm.resx">
+      <DependentUpon>SaldocRMenuFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\SyncColorsForm.resx">
+      <DependentUpon>SyncColorsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\SyncSizesForm.resx">
+      <DependentUpon>SyncSizesForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\SettingsPerUsr.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>SettingsPerUsr.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
